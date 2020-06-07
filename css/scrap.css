@@ -1,0 +1,141 @@
+/* this is banner like text sliding */
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+div {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-size: 60px;
+	color: coral;
+}
+.banner {
+	background: url("/images/big.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+}
+.header {
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url(/images/big.jpg) center/cover no-repeat fixed;
+}
+/* this is transition effect from one box to another */
+p::before {
+	content: "hello ";
+	display: block;
+	background: indigo;
+	font-weight: bold;
+	font-size: 3rem;
+	color: green;
+}
+p::after {
+	content: "";
+	display: block;
+	width: 90px;
+	height: 90px;
+	background: lawngreen;
+}
+div {
+	width: 50vw;
+	margin: 100px auto;
+	position: relative;
+}
+img {
+	width: 100%;
+	display: block;
+}
+div::before {
+	content: "Our Services and Prices";
+	border: 2px solid grey;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: -80px;
+	left: -80px;
+	box-sizing: border-box;
+	z-index: -2;
+	transition: all 0.4s linear;
+}
+div::after {
+	content: "Brazilian";
+	background: grey;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: -40px;
+	left: -40px;
+	box-sizing: border-box;
+	z-index: -1;
+	transition: all 0.4s linear;
+}
+div:hover::after,
+div:hover::before {
+	top: 0;
+	left: 0;
+}
+/* transition example */
+div {
+	width: 150px;
+	height: 150px;
+	display: inline-block;
+}
+.one {
+	background: cornflowerblue;
+}
+.two {
+	background: coral;
+}
+
+.three {
+	background: aqua;
+	transition: background 3s 1s;
+}
+.three:hover {
+	/* border-radius: 50%; */
+	background: yellow;
+}
+
+/* animation example */
+div {
+	width: 200px;
+	height: 100px;
+	margin: 10px;
+	color: black;
+}
+.transition {
+	background: aqua;
+	transition: all 2s linear;
+}
+.transition:hover {
+	background: coral;
+	transform: translateX(100px);
+}
+.animation {
+	background: blue;
+	/* animation-name: move;
+	animation-duration: 10s;
+	animation-iteration-count: 3; */
+	animation: move 5s infinite;
+}
+@keyframes move {
+	0% {
+		transform: translateX(20px);
+	}
+	50% {
+		transform: translateX(100px);
+		background: cornflowerblue;
+	}
+	75% {
+		transform: translateX(-200px);
+		background: yellow;
+	}
+	100% {
+		transform: translateX(20px);
+		background: greenyellow;
+	}
+}

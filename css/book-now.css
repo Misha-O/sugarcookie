@@ -157,7 +157,7 @@ nav .logo {
 }
 .bkn-wrapper {
   width: 70%;
-  max-width: 380px;
+  max-width: 420px;
   background: white;
   /* position: absolute;
   top: 50%;
@@ -208,7 +208,10 @@ nav .logo {
   width: 80%;
   border-radius: 10px;
 }
-
+/* form honeypot */
+form .hidden {
+  display: none;
+}
 /* footer */
 footer {
   /* position: fixed;

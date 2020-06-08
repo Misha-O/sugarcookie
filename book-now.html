@@ -74,11 +74,19 @@
     <div class="bknow-mn-wrapper">
       <div class="bkn-wrapper">
         <h1>Book Now</h1>
-        <form
+        <!-- <form
           target="_blank"
           action="https://formspree.io/mzbjraob"
           method="POST"
-        >
+        > -->
+        <form target="_blank" name="contact" method="POST" data-netlify="true">
+          <!-- honepot -->
+          <p class="hidden">
+            <label
+              >Don’t fill this out if you're human: <input name="bot-field"
+            /></label>
+          </p>
+          <!-- honeypot ends -->
           <div class="bkn-text">
             <label>Full Name:</label>
             <input

@@ -14,15 +14,11 @@ body {
   min-height: 100%;
   font-family: Poppins, sans-serif;
 }
-/* logo style */
-#logo {
-  margin: 0;
-  padding: 0;
-}
+
 /* social side button */
 .social-button {
   position: fixed;
-  top: 180px;
+  top: 220px;
   right: 0%;
 }
 .social-button ul {
@@ -64,52 +60,92 @@ body {
   transform: rotate(360deg);
   transition: all 0.7s;
 }
-/* flex dropdown navbar from youtube*/
+/* navbar */
 * {
-  margin: 0%;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
-/* flex drop down main header */
-.header a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fdfffc;
+nav {
   background: #ffbfcb;
-  height: 7vh;
-  font-family: Poppins, sans-serif;
-  font-weight: bold;
-  text-decoration: none;
-  text-transform: uppercase;
-  border-radius: 4px;
 }
-.header a:hover {
-  background: #57b8ff;
-  color: #fdfffc;
+nav::after {
+  content: "";
+  clear: both;
+  display: table;
 }
-.header ul {
+nav ul {
+  float: right;
   list-style: none;
-  display: flex;
-}
-.header li {
+  margin-right: 40px;
   position: relative;
-  width: 100%;
   text-align: center;
+  font-weight: 500;
 }
-.header li:hover .dropdown-1 > li {
-  top: 0;
-  display: block;
+nav ul li {
+  float: left;
+  /* display: inline-block; */
+  margin: 0 5px;
+  background: #ffbfcb;
 }
-.dropdown-1 li {
-  display: none;
-  position: relative;
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  line-height: 70px;
+  font-size: 20px;
+  padding: 9px 15px;
 }
-.dropdown-1 {
+nav ul li a:hover {
+  color: #57b8ff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #353a47;
+}
+nav ul li a:hover {
+  color: #57b8ff;
+
+  box-shadow: none;
+}
+nav ul ul {
   position: absolute;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+  top: 90px;
+  border-top: 3px solid #46c4f6;
+  opacity: 0;
+  visibility: hidden;
+  transition: top 0.3s;
+}
+nav ul li:hover ul {
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+nav ul ul li {
+  position: relative;
+  margin: 0px;
+  width: 150px;
+  float: none;
+  display: list-item;
+  border-bottom: 1px solid #00acee;
+  z-index: 99;
+}
+nav ul li ul li a {
+  font-size: 16px;
+}
+nav ul ul li a {
+  line-height: 50px;
+}
+nav .logo {
+  float: left;
+  color: #7d4f61;
+  font-size: 27px;
+  font-weight: 600;
+  line-height: 70px;
+  padding-left: 60px;
+  text-transform: uppercase;
+}
+.logo {
+  margin: 0;
+  padding: 0;
 }
 /* book now section */
 

@@ -79,7 +79,13 @@
           action="https://formspree.io/mzbjraob"
           method="POST"
         > -->
-        <form target="_blank" name="contact" method="POST" data-netlify="true">
+        <form
+          target="_blank"
+          name="book now"
+          data-netlify-recaptcha="true"
+          method="POST"
+          data-netlify="true"
+        >
           <!-- honepot -->
           <p class="hidden">
             <label
@@ -126,6 +132,8 @@
               placeholder="Your message"
             ></textarea>
           </div>
+          <!-- CAPTCHA div from Netlify -->
+          <div data-netlify-recaptcha="true"></div>
 
           <!-- your other form fields go here -->
 
